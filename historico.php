@@ -1,0 +1,88 @@
+<?php require __DIR__.'/includes/auth.php'; $u = exigir_login(); ?>
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Histórico</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <section id="d-lateral">
+        <span id="principal">Pontos por reciclagem</span>
+        <nav>
+            <a href="inicio.php"><img class="icone" src="img/inicio.svg" alt="" /><span class="s-txt">Início</span></a>
+            <a href="dashboard.php"><img class="icone" src="img/dashboard.svg" alt="" /><span
+                    class="s-txt">Dashboard</span></a>
+            <a href="beneficio.php"><img class="icone" src="img/ticket.svg" alt="" /><span
+                    class="s-txt">Benefícios</span></a>
+            <a href="historico.php" class="ativo"><img class="icone" src="img/historico.svg" alt="" /><span
+                    class="s-txt">Histórico</span></a>
+            <a href="perfil.php"><img class="icone" src="img/perfil.svg" alt="" /><span class="s-txt">Perfil</span></a>
+            <a href="sobre.php"><img class="icone" src="img/sobre.svg" alt="" /><span class="s-txt">Sobre</span></a>
+            <a href="contato.php"><img class="icone" src="img/contato.svg" alt="" /><span
+                    class="s-txt">Contato</span></a>
+        </nav>
+        <details class="menu-usuario">
+            <summary>
+                <span class="avatar-menu" aria-hidden="true"><?= e(iniciais($u["nome"])) ?></span>
+                <span class="usuario-dados"><strong><?= e($u["nome"]) ?></strong><small><?= e($u["email"]) ?></small></span>
+            </summary>
+            <div class="submenu-usuario">
+                <a href="perfil.php">Meu perfil</a>
+                <?php if ($u["perfil"]==="admin"): ?><a href="admin/index.php">Administração</a><?php endif; ?>
+        <a href="logout.php">Sair</a>
+            </div>
+        </details>
+    </section>
+    <div class="interno-b">
+        <p>Histórico Detalhado</p>
+
+        <div class="historico-resumo">
+            <div class="resumo-item">
+                <span class="resumo-valor" id="resumo-ganho">+0</span>
+                <span class="resumo-label">pontos ganhos</span>
+            </div>
+            <div class="resumo-item">
+                <span class="resumo-valor resumo-negativo" id="resumo-resgatado">0</span>
+                <span class="resumo-label">pontos gastos</span>
+            </div>
+            <div class="resumo-item">
+                <span class="resumo-valor" id="resumo-itens">0</span>
+                <span class="resumo-label">itens entregues</span>
+            </div>
+            <div class="resumo-item">
+                <span class="resumo-valor" id="resumo-saldo">0</span>
+                <span class="resumo-label">saldo atual</span>
+            </div>
+        </div>
+
+        <div class="historico-filtros">
+            <select id="filtro-tipo">
+                <option value="todos">Todas as movimentações</option>
+                <option value="ganho">Somente ganhos</option>
+                <option value="resgate">Somente resgates</option>
+            </select>
+            <select id="filtro-periodo">
+                <option value="todos">Qualquer período</option>
+                <option value="7">Últimos 7 dias</option>
+                <option value="30">Últimos 30 dias</option>
+                <option value="mes">Este mês</option>
+            </select>
+        </div>
+
+        <div class="historico-lista" id="historico-lista">
+            <!-- itens renderizados via JS -->
+        </div>
+
+        <div class="historico-acoes">
+            <button type="button" id="btn-registrar-entrega">Registrar entrega</button>
+            <button type="button" id="btn-resgatar-pontos">Resgatar pontos</button>
+        </div>
+    </div>
+    <script src="js/historico.js"></script>
+</body>
+
+</html>

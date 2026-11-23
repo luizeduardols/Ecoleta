@@ -1,0 +1,89 @@
+<?php require __DIR__.'/includes/auth.php'; $u = exigir_login(); ?>
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sobre | Pontos por Reciclagem</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <section id="d-lateral">
+    <span id="principal">Pontos por reciclagem</span>
+    <nav>
+      <a href="inicio.php"><img class="icone" src="img/inicio.svg" alt="" /><span class="s-txt">Início</span></a>
+      <a href="dashboard.php"><img class="icone" src="img/dashboard.svg" alt="" /><span
+          class="s-txt">Dashboard</span></a>
+      <a href="beneficio.php"><img class="icone" src="img/ticket.svg" alt="" /><span
+          class="s-txt">Benefícios</span></a>
+      <a href="historico.php"><img class="icone" src="img/historico.svg" alt="" /><span
+          class="s-txt">Histórico</span></a>
+      <a href="perfil.php"><img class="icone" src="img/perfil.svg" alt="" /><span class="s-txt">Perfil</span></a>
+      <a href="sobre.php" class="ativo"><img class="icone" src="img/sobre.svg" alt="" /><span
+          class="s-txt">Sobre</span></a>
+      <a href="contato.php"><img class="icone" src="img/contato.svg" alt="" /><span class="s-txt">Contato</span></a>
+    </nav>
+    <details class="menu-usuario">
+      <summary>
+        <span class="avatar-menu" aria-hidden="true"><?= e(iniciais($u["nome"])) ?></span>
+        <span class="usuario-dados"><strong><?= e($u["nome"]) ?></strong><small><?= e($u["email"]) ?></small></span>
+      </summary>
+      <div class="submenu-usuario">
+        <a href="perfil.php">Meu perfil</a>
+        <?php if ($u["perfil"]==="admin"): ?><a href="admin/index.php">Administração</a><?php endif; ?>
+        <a href="logout.php">Sair</a>
+      </div>
+    </details>
+  </section>
+
+  <main class="conteudo-pagina">
+    <div class="conteiner-pagina pagina-sobre">
+      <header class="sobre-cabecalho">
+        <p class="sobre-selo">Pontos por Reciclagem</p>
+        <h1>Reciclar hoje para transformar o amanhã.</h1>
+        <p class="texto-secundario">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis voluptate vel
+          quibusdam magnam voluptates delectus, nemo repellendus minima culpa id.</p>
+      </header>
+
+      <section class="cartao-pagina sobre-destaque">
+        <h2>Nosso propósito</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum veritatis, ducimus blanditiis ipsam cumque
+          velit, expedita enim qui nostrum iste dolorum ipsa mollitia incidunt similique perspiciatis voluptate.
+          Mollitia, libero commodi?</p>
+      </section>
+
+      <section class="sobre-grade" aria-label="Como o projeto funciona">
+        <article class="cartao-pagina sobre-etapa">
+          <span class="sobre-numero">1</span>
+          <h2>Separe</h2>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque cupiditate perferendis.</p>
+        </article>
+        <article class="cartao-pagina sobre-etapa">
+          <span class="sobre-numero">2</span>
+          <h2>Entregue</h2>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque cupiditate perferendis</p>
+        </article>
+        <article class="cartao-pagina sobre-etapa">
+          <span class="sobre-numero">3</span>
+          <h2>Aproveite</h2>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque cupiditate perferendis</p>
+        </article>
+      </section>
+
+      <section class="sobre-valores">
+        <article class="cartao-pagina">
+          <h2>Impacto local</h2>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque cupiditate perferendis</p>
+        </article>
+        <article class="cartao-pagina">
+          <h2>Transparência</h2>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque cupiditate perferendis</p>
+        </article>
+      </section>
+    </div>
+  </main>
+</body>
+
+</html>

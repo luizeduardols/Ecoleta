@@ -1,0 +1,103 @@
+<?php require __DIR__.'/includes/auth.php'; $u = exigir_login(); ?>
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Início - Pontos por reciclagem</title>
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+  <section id="d-lateral">
+    <span id="principal">Pontos por reciclagem</span>
+    <nav>
+      <a href="inicio.php" class="ativo"><img class="icone" src="img/inicio.svg" /><span class="s-txt">Início</span></a>
+      <a href="dashboard.php"><img class="icone" src="img/dashboard.svg" alt="" /><span
+          class="s-txt">Dashboard</span></a>
+      <a href="beneficio.php"><img class="icone" src="img/ticket.svg" /><span class="s-txt">Benefícios</span></a>
+      <a href="historico.php"><img class="icone" src="img/historico.svg" alt="" /><span
+          class="s-txt">Histórico</span></a>
+      <a href="perfil.php"><img class="icone" src="img/perfil.svg" alt="" /><span class="s-txt">Perfil</span></a>
+      <a href="sobre.php"><img class="icone" src="img/sobre.svg" alt="" /><span class="s-txt">Sobre</span></a>
+      <a href="contato.php"><img class="icone" src="img/contato.svg" alt="" /><span class="s-txt">Contato</span></a>
+    </nav>
+    <details class="menu-usuario">
+      <summary>
+        <span class="avatar-menu" aria-hidden="true"><?= e(iniciais($u["nome"])) ?></span>
+        <span class="usuario-dados"><strong><?= e($u["nome"]) ?></strong><small><?= e($u["email"]) ?></small></span>
+      </summary>
+      <div class="submenu-usuario">
+        <a href="perfil.php">Meu perfil</a>
+        <?php if ($u["perfil"]==="admin"): ?><a href="admin/index.php">Administração</a><?php endif; ?>
+        <a href="logout.php">Sair</a>
+      </div>
+    </details>
+  </section>
+
+  <section id="d-conteudo">
+    <div id="d-boasvindas">
+      <h1>Olá, <?= e($u["nome"]) ?></h1>
+      <p>Confira o resumo dos seus benefícios</p>
+    </div>
+
+    <div id="d-cartoes">
+      <div class="cartao">
+        <div class="cartao-rotulo">Pontos acumulados</div>
+        <div class="cartao-valor">1.240 pts</div>
+        <img class="info-icon" src="img/pontos.svg">
+      </div>
+      <div class="cartao">
+        <div class="cartao-rotulo">Total de benefícios resgatados</div>
+        <div class="cartao-valor">12</div>
+        <img class="info-icon" src="img/ticket.svg">
+      </div>
+      <div class="cartao">
+        <div class="cartao-rotulo">Membro desde</div>
+        <div class="cartao-valor">Mar/2025</div>
+        <img class="info-icon" src="img/calendario.svg">
+      </div>
+    </div>
+
+    <div id="d-noticias">
+      <h2>Notícias</h2>
+      <div id="d-lista-noticias">
+        <div class="noticia">
+          <div class="noticia-icone"><img src="img/noticia.svg"></div>
+          <div>
+            <div class="noticia-data">28 de agosto de 2026</div>
+            <div class="noticia-titulo">Novo ponto de coleta aberto no bairro</div>
+            <p class="noticia-texto">Agora fica mais fácil entregar seus recicláveis perto de casa.</p>
+          </div>
+        </div>
+
+        <div class="noticia">
+          <div class="noticia-icone"><img src="img/noticia.svg"></div>
+          <div>
+            <div class="noticia-data">20 de agosto de 2026</div>
+            <div class="noticia-titulo">Campanha de troca de pontos por brindes</div>
+            <p class="noticia-texto">Confira os novos itens disponíveis para resgate com seus pontos.</p>
+          </div>
+        </div>
+
+        <div class="noticia">
+          <div class="noticia-icone"><img src="img/noticia.svg"></div>
+          <div>
+            <div class="noticia-data">10 de agosto de 2026</div>
+            <div class="noticia-titulo">Dicas para separar melhor seu lixo reciclável</div>
+            <p class="noticia-texto">Pequenos cuidados que aumentam a qualidade da reciclagem.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <p>2026 - Pontos Por Reciclagem</p>
+      <span>Email: ppr@ppr.com.br</span><br><span>Fone: (81) 90000-0000</span>
+    </footer>
+  </section>
+
+</body>
+
+</html>
