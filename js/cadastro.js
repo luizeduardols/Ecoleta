@@ -1,4 +1,3 @@
-// Melhorias de UX no cadastro. A validação definitiva é feita no servidor (cadastro.php).
 document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('form-cadastro');
   if (!form) return;
