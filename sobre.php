@@ -5,13 +5,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sobre | Pontos por Reciclagem</title>
+  <title>Sobre | Ecoleta</title>
   <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
   <section id="d-lateral">
-    <span id="principal">Pontos por reciclagem</span>
+    <span id="principal">Ecoleta</span>
     <nav>
       <a href="inicio.php"><img class="icone" src="img/inicio.svg" alt="" /><span class="s-txt">Início</span></a>
       <a href="dashboard.php"><img class="icone" src="img/dashboard.svg" alt="" /><span

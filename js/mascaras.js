@@ -1,4 +1,3 @@
-// Máscaras de CPF e telefone: qualquer <input data-mascara="cpf|telefone">
 document.addEventListener('DOMContentLoaded', () => {
   const mascaras = {
     cpf: v => v.replace(/\D/g, '').slice(0, 11)

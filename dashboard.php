@@ -11,7 +11,7 @@
 
 <body id="dash">
   <section id="d-lateral">
-    <span id="principal">Pontos por reciclagem</span>
+    <span id="principal">Ecoleta</span>
     <nav>
       <a href="inicio.php"><img class="icone" src="img/inicio.svg" /><span class="s-txt">Início</span></a>
       <a href="dashboard.php" class="ativo"><img class="icone" src="img/dashboard.svg" /><span

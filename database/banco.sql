@@ -1,6 +1,5 @@
--- Pontos por Reciclagem | MySQL 5.7+/MariaDB 10.3+
-CREATE DATABASE IF NOT EXISTS ppr CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-USE ppr;
+CREATE DATABASE IF NOT EXISTS ecoleta CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+USE ecoleta;
 
 CREATE TABLE usuarios (
   id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,

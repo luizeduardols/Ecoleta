@@ -73,7 +73,7 @@ Na Administração você cadastra **usuários, benefícios, materiais e parceiro
 | O que aconteceu | O que fazer |
 | --- | --- |
 | Aparece código PHP ou tela em branco | Abra por `http://localhost/...` e confira se o Apache está ligado. |
-| `Unknown database 'ppr'` | Importe o arquivo `database/schema.sql`. |
+| `Unknown database 'ppr'` | Importe o arquivo `database/banco.sql`. |
 | `Access denied for user 'root'` | Crie o `includes/config.local.php` com a sua senha. |
 | `could not find driver` | Ative `extension=pdo_mysql` no `php.ini` e reinicie o Apache. |
 | `undefined function mb_...` | Ative `extension=mbstring` no `php.ini` e reinicie o Apache. |

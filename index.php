@@ -20,13 +20,13 @@ if (!$beneficios) $beneficios = [['titulo'=>'2 ingressos de cinema','custo_ponto
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pontos por Reciclagem — Reciclar rende ponto</title>
+  <title>Ecoleta — Reciclar rende ponto</title>
   <meta name="description" content="Entregue recicláveis em pontos de coleta parceiros, acumule pontos e troque por cinema, shows e bem-estar.">
   <link rel="stylesheet" href="css/landing.css">
 </head>
 <body>
 <header class="topo">
-  <a class="marca" href="index.php"><span>♻️</span> Pontos por reciclagem</a>
+  <a class="marca" href="index.php"><span>♻️</span>Ecoleta</a>
   <nav>
     <a href="#como-funciona">Como funciona</a>
     <a href="#materiais">Materiais</a>
@@ -110,8 +110,8 @@ if (!$beneficios) $beneficios = [['titulo'=>'2 ingressos de cinema','custo_ponto
 </main>
 
 <footer class="rodape">
-  <span>© <?= date('Y') ?> Pontos por Reciclagem</span>
-  <span>ppr@ppr.com.br · (81) 90000-0000</span>
+  <span>© <?= date('Y') ?> Ecoleta</span>
+  <span>ecoleta@ppr.com.br · (81) 90000-0000</span>
   <nav><a href="sobre.php">Sobre</a><a href="contato.php">Contato</a><a href="login.php">Entrar</a></nav>
 </footer>
 </body>

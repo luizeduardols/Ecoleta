@@ -3,7 +3,6 @@ require __DIR__.'/../includes/auth.php';
 $eu = exigir_admin();
 $pdo = db();
 
-// [campo, rótulo, tipo, obrigatório]  — tipos: text, number, date, email, password, select:<opções> ou select:@tabela
 $E = [
  'materiais' => ['t'=>'Materiais','ativo'=>1,'cols'=>['icone'=>'Ícone','nome'=>'Nome','pontos_por_kg'=>'Pts/kg'],
    'f'=>[['nome','Nome','text',1],['pontos_por_kg','Pontos por kg','number',1],['icone','Ícone (emoji)','text',0],['descricao','Descrição','text',0]]],
@@ -50,7 +49,7 @@ $linhas = $pdo->query("SELECT * FROM $tab ORDER BY id DESC LIMIT 200")->fetchAll
 ?>
 <!DOCTYPE html>
 <html lang="pt-br"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Administração — Pontos por Reciclagem</title><link rel="stylesheet" href="../css/auth.css"></head>
+<title>Administração — Ecoleta</title><link rel="stylesheet" href="../css/auth.css"></head>
 <body><div class="adm">
 <header><h1>Administração</h1><span><?= e($eu['nome']) ?> · <a href="../inicio.php">Voltar ao site</a> · <a href="../logout.php">Sair</a></span></header>
 <nav class="abas"><?php foreach ($E as $k=>$c): ?><a href="?e=<?= $k ?>" class="<?= $k===$tab?'on':'' ?>"><?= e($c['t']) ?></a><?php endforeach; ?></nav>

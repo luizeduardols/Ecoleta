@@ -8,7 +8,7 @@ const MATERIAIS = [
 ];
 
 const CHAVE_STORAGE = 'historico_reciclagem';
-let itensAbertos = new Set(); // ids expandidos, para manter o estado ao re-renderizar
+let itensAbertos = new Set();
 
 function carregarHistorico(){
   try { return JSON.parse(localStorage.getItem(CHAVE_STORAGE)) || []; }

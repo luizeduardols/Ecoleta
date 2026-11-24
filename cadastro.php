@@ -46,12 +46,12 @@ function campo_erro(array $erros, string $k): string {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Crie sua conta — Pontos por Reciclagem</title>
+  <title>Crie sua conta — Ecoleta</title>
   <link rel="stylesheet" href="css/auth.css">
 </head>
 <body class="cad">
 <aside class="lado">
-  <a class="marca" href="index.php">♻️ Pontos por reciclagem</a>
+  <a class="marca" href="index.php">♻️ Ecoleta</a>
   <h1>Comece a transformar reciclagem em experiências.</h1>
   <ul>
     <li><b>Ganhe pontos</b> a cada entrega nos pontos de coleta</li>

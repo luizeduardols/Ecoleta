@@ -1,4 +1,3 @@
-// Pede confirmação antes de salvar o telefone
 document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('form-perfil');
   form?.addEventListener('submit', e => {
